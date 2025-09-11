@@ -45,10 +45,10 @@ To solidify our database design, an ERD was created to display the relations and
 
 ## Create Database
 
-Run to create the DB
+Run these commands sequentially to create the DB from the repository root and complete the queries.
 
-```createdb -h localhost -U postgres schooldb```
-
-Run to load schema + seed
-
-```psql -h localhost -U postgres -d schooldb -f "./SchoolDB.sql"```
+```
+createdb schooldb
+psql -d schooldb -f ./SchoolDB.sql
+psql -d schooldb -f ./queries.sql
+```
